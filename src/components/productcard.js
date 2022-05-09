@@ -42,7 +42,7 @@ export default function Pcard(props) {
         <div className='cardcont'>
             <h3 className='prodtitle'>{props.title}</h3>
             <img src={image} alt={props.title}></img>
-            <p className='price'>${props.price}</p>
+            <p className='price'>${props.price.toFixed(2)}</p>
             {counter === 0 && <button className='ATC bg-dark' onClick={AddToCart}>Add To Cart</button> }
             
             {counter !== 0 && <div className='amounts'>

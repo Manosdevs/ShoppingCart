@@ -12,7 +12,7 @@ export default function OffCanvs(props) {
         return <div className='cartli'><img src={image} alt={Foods[elem.id].title} ></img>
             <div>
                 <h6 className='itemtitle'>{Foods[elem.id].title}</h6> <br></br> 
-                <h7 className='itmamt'> Amount: {elem.amount}  x  ${Foods[elem.id].price} </h7><br></br>
+                <h7 className='itmamt'> Amount: {elem.amount}  x  ${Foods[elem.id].price.toFixed(2)} </h7><br></br>
                 <h7 className='total'>Total ${total.toFixed(2)} </h7>
             </div>
             <button onClick={() => props.delItem(elem.id)} className='bg-dark delicon'><i class="bi bi-trash3"></i></button>

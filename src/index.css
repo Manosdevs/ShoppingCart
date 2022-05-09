@@ -7,7 +7,7 @@
 
 body {
   background-color: #0b2435;
-  overflow-x: hidden;
+  overflow-x: scroll;
 }
 
 .App {
@@ -59,23 +59,24 @@ body {
   
   height: 85vh;
  
-  display: flex;
+  display: none;
   position: absolute;
   justify-content: flex-start;
-  right: -100%;
+  right: 0;
   margin-top: 6rem;
   transition: 200ms;
   border-radius: 0 0 0 1rem;
   font-size: large;
   overflow-y: scroll;
   overflow-x: hidden;
+  z-index: 9;
   
 
 }
 
 .offcanvs.active {
-  right: 0;
-  transition: 150ms;
+  display: flex;
+  transition: 350ms;
 }
 
 
@@ -242,6 +243,7 @@ text-overflow: ellipsis;
   width: 6rem;
   height: 2rem;
   color: white;
+  border: 1px solid black;
  
 
 }
@@ -270,3 +272,4 @@ text-overflow: ellipsis;
   font-size: 1.2rem;
 
 }
+
