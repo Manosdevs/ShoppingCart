@@ -55,7 +55,8 @@ body {
 /*   Sidebar Styling //////////////////////////////////////////////*/
 
 .offcanvs {
-  width: 25rem;
+  width: 20rem;
+  
   
   height: 85vh;
  
@@ -169,7 +170,7 @@ text-overflow: ellipsis;
   color: black;
   width: 7rem;
   min-height: 3rem;
-  margin-left: 9rem;
+  margin-left: 7rem;
   background-color: #D3DEDC;
  
  
