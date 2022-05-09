@@ -24,7 +24,7 @@ export default function Navbar(props) {
                         </ul>
                         
                     </div>
-                    <button onClick={props.handleClick} className='cartbutton'><i className='bi bi-cart'></i> Your Cart</button>
+                    <button onClick={props.handleClick} className='cartbutton'><i className='bi bi-cart'></i> Your Cart({props.cart.length})</button>
                     
                 </div>
                   

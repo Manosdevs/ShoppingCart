@@ -21,9 +21,23 @@ function App() {
     console.log(JSON.stringify(inCart, null, 2))
   }
 
+  function DelItem(id) {
+    setInCart(elem => elem.filter((item) => id !== item.id))
+  }
+
+  function Delfromcart(id) {
+    setInCart(elem => elem.map((item) => {
+      if (id === item.id) {
+        return {'id': id,  'amount': 0}
+      } else {
+        return {...item}  
+      }
+    })) 
+  }
+
   function incrAmount(id, counter) {
     if (counter === 0) {
-      setInCart(elem => elem.filter((item) => id !== item.id))
+      DelItem(id)
     } else {
 
       setInCart(elem => elem.map((item) => {
@@ -49,15 +63,15 @@ function App() {
     add={addToCart}
     id={elem.id}
     incr={incrAmount}
-    
+    cart={inCart}
    
 
     />
   })
   return (
     <div className="App">
-      <Navbar  handleClick={showSidebar} />
-      <OffCanvs cart={inCart} offcanv={offCanv} />
+      <Navbar cart={inCart} handleClick={showSidebar} />
+      <OffCanvs delItem={Delfromcart} cart={inCart} offcanv={offCanv} />
        
         
       <div className='productpage'>

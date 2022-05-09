@@ -2,59 +2,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
-img {
-  width: 12rem;
-  height: 12rem;
+body {
+  background-color: #0b2435;
+  overflow-x: hidden;
 }
 
 .App {
   display: flex;
   flex-direction: column;
-
-}
-
-.productpage {
-  width: 80%;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(auto, 1fr);
-  grid-column-gap: 0.1rem;
-  margin-top: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cardcont {
-  display: flex;
-  flex-direction: column;
   
-  border: 1px solid black;
-  width: 17rem;
-  height: 20rem;
-  align-items: center;
-  border-radius: 1rem;
-  margin-bottom: 2rem;
+
 }
 
-.prodtitle {
-  text-align: center;
-  height: 2.5rem;
-  margin-top: 0.5rem;
-}
 
-.price {
-  position: absolute;
-  margin-top: 16rem;
-  margin-right: 10rem;
-  font-size: large;
-  font-weight: bold;
-}
 
 .bi-cart {
   font-size: 40px;
   color: white;
+}
+
+.bi-cart:hover {
+  font-size: 45px;
 }
 
 .cartbutton {
@@ -67,6 +38,8 @@ img {
   
   
 } 
+
+
  
 .navbar {
   width: 100%;
@@ -79,17 +52,24 @@ img {
   margin-left: 1rem;
 }
 
+/*   Sidebar Styling //////////////////////////////////////////////*/
+
 .offcanvs {
-  width: 15rem;
-  background-color: red;
-  height: 70vh;
-  border: 1px solid red;
+  width: 25rem;
+  
+  height: 85vh;
+ 
   display: flex;
-  position: fixed;
-  justify-content: center;
+  position: absolute;
+  justify-content: flex-start;
   right: -100%;
-  margin-top: 5rem;
+  margin-top: 6rem;
   transition: 200ms;
+  border-radius: 0 0 0 1rem;
+  font-size: large;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  
 
 }
 
@@ -98,10 +78,195 @@ img {
   transition: 150ms;
 }
 
+
+
+.cartlist  {
+  color: white;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.cartli {
+  white-space:  nowrap;
+  margin-top: 1rem;
+ 
+  margin-left: 1rem;
+ min-height: 8rem;
+ width: 100%;
+
+
+
+ 
+
+ display: flex;
+
+
+
+text-align: left;
+text-overflow: ellipsis;
+
+ 
+ 
+ 
+  
+  
+}
+
+.cartli > img {
+  width: 5rem;
+  height: 5rem;
+ 
+  
+  
+  
+  
+  
+}
+
+.line {
+  width: 100%;
+  color: white;
+  border: 1px solid white;
+  position: absolute;
+  
+  margin-top: 7rem;
+  
+  
+}
+
+.itemtitle {
+  font-weight: 600;
+  font-size:1.2rem;
+  max-height: 0.2rem;
+  
+
+}
+
+.total {
+  font-weight: bold;
+
+}
+
+.delicon {
+  position: absolute;
+  right: 0;
+  align-self: center;
+  height: 4rem;
+  width: 3rem;
+  border: 0px;
+  
+}
+
+.bi-trash3 {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.checkout {
+  color: black;
+  width: 7rem;
+  min-height: 3rem;
+  margin-left: 9rem;
+  background-color: #D3DEDC;
+ 
+ 
+  border-radius: 12px;
+
+
+}
+
+
+/* Product card styling ////////////////////////////////////////////////////////// */
+
+
+.productpage {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  grid-column-gap: 0.1rem;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  
+  /* background-size: cover; */
+}
+
+
+.cardcont {
+  display: flex;
+  flex-direction: column;
+  background-color: #D3DEDC;
+  
+  border: 1px solid black;
+  width: 17rem;
+  height: 20rem;
+  align-items: center;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  max-width: 17rem;
+}
+
+.cardcont > img {
+  width: 12rem;
+  height: 12rem;
+}
+
+.prodtitle {
+  
+  text-overflow: ellipsis;
+  text-align: center;
+  height: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.price {
+  position: absolute;
+  margin-top: 15.7rem;
+  
+  font-size: larger;
+  font-weight: bold;
+}
+
 .amounts {
   display: flex;
+
+}
+
+.ATC {
+  position: relative;
+  top: 2rem;
+  border-radius: 5px;
+  width: 6rem;
+  height: 2rem;
+  color: white;
+ 
+
 }
 
 .increment {
-  width: 1.5rem;
+  color: white;
+  width: 2.5rem;
+  height: 2rem;
+  border-radius: 4px;
+  position: relative;
+  top: 2rem;
+  border: 1px solid black;
+  
+}
+
+.counter {
+  position: relative;
+  top: 2rem;
+  
+  border: 1px solid black;
+  width: 3rem;
+  height: 2rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+
 }
