@@ -1,13 +1,107 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+img {
+  width: 12rem;
+  height: 12rem;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.productpage {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  grid-column-gap: 0.1rem;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cardcont {
+  display: flex;
+  flex-direction: column;
+  
+  border: 1px solid black;
+  width: 17rem;
+  height: 20rem;
+  align-items: center;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.prodtitle {
+  text-align: center;
+  height: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.price {
+  position: absolute;
+  margin-top: 16rem;
+  margin-right: 10rem;
+  font-size: large;
+  font-weight: bold;
+}
+
+.bi-cart {
+  font-size: 40px;
+  color: white;
+}
+
+.cartbutton {
+ width: 200px;
+  height: 60px;
+  border: 0px;
+  background-color: white;
+  background: transparent;
+  color: white; 
+  
+  
+} 
+ 
+.navbar {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+}
+
+.nav-link {
+  font-size: large;
+  margin-left: 1rem;
+}
+
+.offcanvs {
+  width: 15rem;
+  background-color: red;
+  height: 70vh;
+  border: 1px solid red;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  right: -100%;
+  margin-top: 5rem;
+  transition: 200ms;
+
+}
+
+.offcanvs.active {
+  right: 0;
+  transition: 150ms;
+}
+
+.amounts {
+  display: flex;
+}
+
+.increment {
+  width: 1.5rem;
 }

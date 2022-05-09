@@ -1,23 +1,72 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from "react";
+import Pcard from "./components/productcard";
+import Foods from "./Productlist/Foods.json";
+import Navbar from "./components/navbar";
+import OffCanvs from "./components/offcanvs";
 
 function App() {
+
+  const [inCart, setInCart] = useState([])
+  const [offCanv, setOffCanv] = useState(false)
+ 
+ function showSidebar() {
+   setOffCanv(!offCanv)
+   console.log(offCanv)
+   console.log(JSON.stringify(inCart, null, 2))
+ }
+
+  function addToCart(id) {
+    
+    setInCart(elem => [...elem, {'id': id, 'amount': 1}])
+    console.log(JSON.stringify(inCart, null, 2))
+  }
+
+  function incrAmount(id, counter) {
+    setInCart(elem => elem.map((item) => {
+      if (id === item.id) {
+        return {'id': id,  'amount': counter}
+      } else {
+        return {...item}  
+      }
+    }))
+  }
+
+  function decrAmount(id, counter) {
+    setInCart(elem => elem.map((item) => {
+      if (id === item.id) {
+        return {'id': id,  'amount': counter - 1}
+      } else {
+        return {...item}  
+      }
+    }))
+  }
+
+
+ 
+
+  const products = Foods.map(elem => {
+   return <Pcard 
+    key={elem.id}
+    title={elem.title}
+    image={elem.image}
+    price={elem.price}
+    add={addToCart}
+    id={elem.id}
+    incr={incrAmount}
+    decr={decrAmount}
+
+    />
+  })
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar  handleClick={showSidebar} />
+      <OffCanvs cart={inCart} offcanv={offCanv} />
+       
+        
+      <div className='productpage'>
+        {products}
+      </div>  
+      
     </div>
   );
 }
