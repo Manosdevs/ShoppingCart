@@ -22,24 +22,20 @@ function App() {
   }
 
   function incrAmount(id, counter) {
-    setInCart(elem => elem.map((item) => {
-      if (id === item.id) {
-        return {'id': id,  'amount': counter}
-      } else {
-        return {...item}  
-      }
-    }))
-  }
+    if (counter === 0) {
+      setInCart(elem => elem.filter((item) => id !== item.id))
+    } else {
 
-  function decrAmount(id, counter) {
-    setInCart(elem => elem.map((item) => {
-      if (id === item.id) {
-        return {'id': id,  'amount': counter - 1}
-      } else {
-        return {...item}  
-      }
-    }))
+      setInCart(elem => elem.map((item) => {
+        if (id === item.id) {
+          return {'id': id,  'amount': counter}
+        } else {
+          return {...item}  
+        }
+        }))
+    }
   }
+ 
 
 
  
@@ -53,7 +49,8 @@ function App() {
     add={addToCart}
     id={elem.id}
     incr={incrAmount}
-    decr={decrAmount}
+    
+   
 
     />
   })

@@ -17,21 +17,7 @@ export default function Pcard(props) {
         props.incr(props.id, counter)
     }, [counter])
 
-  /*   const  Increase = useCallback( () => {
-            setCounter(counter => counter + 1)
-            props.incr(props.id, counter)
-            
-            
-            
-        }, [counter])
 
-        function Decrease() {
-            setCounter(counter => counter - 1 )
-            props.decr(props.id, counter)
-            
-            
-            
-        } */
 
     function Increase() {
         setCounter(counter + 1)
