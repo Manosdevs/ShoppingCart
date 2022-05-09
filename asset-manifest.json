@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/ShoppingCart/static/css/main.5f634944.css",
+    "main.css": "/ShoppingCart/static/css/main.2ff31119.css",
     "main.js": "/ShoppingCart/static/js/main.83bf489c.js",
     "static/media/pepsilime.png": "/ShoppingCart/static/media/pepsilime.9be13956e473c76fcb99.png",
     "index.html": "/ShoppingCart/index.html",
-    "main.5f634944.css.map": "/ShoppingCart/static/css/main.5f634944.css.map",
+    "main.2ff31119.css.map": "/ShoppingCart/static/css/main.2ff31119.css.map",
     "main.83bf489c.js.map": "/ShoppingCart/static/js/main.83bf489c.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f634944.css",
+    "static/css/main.2ff31119.css",
     "static/js/main.83bf489c.js"
   ]
 }
