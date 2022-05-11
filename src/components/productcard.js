@@ -4,8 +4,16 @@ import React, {useState, useEffect, useRef, useCallback} from "react";
 
 export default function Pcard(props) {
     const image = require(`./images/${props.image}`)
-    const [counter, setCounter] = useState(0)
-   
+  
+    const [counter, setCounter] = useState(
+        JSON.parse(localStorage.getItem(`counter${props.id}`)) || 0
+        )
+
+        useEffect(() => {
+            localStorage.setItem(`counter${props.id}`, JSON.stringify(counter))
+          }, [counter])
+
+
     const  AddToCart = useCallback( () => {
             props.add(props.id)
             setCounter(counter => counter + 1)

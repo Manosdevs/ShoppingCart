@@ -6,9 +6,16 @@ import OffCanvs from "./components/offcanvs";
 
 function App() {
 
-  const [inCart, setInCart] = useState([])
+  const [inCart, setInCart] = useState(
+    JSON.parse(localStorage.getItem('cartitems')) || []
+    )
   const [offCanv, setOffCanv] = useState(false)
  
+  useEffect(() => {
+    localStorage.setItem('cartitems', JSON.stringify(inCart))
+  }, [inCart])
+
+
  function showSidebar() {
    setOffCanv(!offCanv)
    console.log(offCanv)
