@@ -1831,5 +1831,43 @@
 			"https://dummyjson.com/image/i/products/99/4.jpg",
 			"https://dummyjson.com/image/i/products/99/thumbnail.jpg"
 		]
+	},
+	{
+		"id": 100,
+		"title": "American Vintage Wood Pendant Light2",
+		"description": "American Vintage Wood Pendant Light Farmhouse Antique Hanging Lamp Lampara Colgante",
+		"price": 46,
+		"discountPercentage": 8.84,
+		"rating": 4.32,
+		"stock": 138,
+		"brand": "Ifei Home",
+		"category": "lighting",
+		"thumbnail": "https://dummyjson.com/image/i/products/99/thumbnail.jpg",
+		"images": [
+			"https://dummyjson.com/image/i/products/99/1.jpg",
+			"https://dummyjson.com/image/i/products/99/2.jpg",
+			"https://dummyjson.com/image/i/products/99/3.jpg",
+			"https://dummyjson.com/image/i/products/99/4.jpg",
+			"https://dummyjson.com/image/i/products/99/thumbnail.jpg"
+		]
+	},
+	{
+		"id": 101,
+		"title": "American Vintage Wood Pendant Light3",
+		"description": "American Vintage Wood Pendant Light Farmhouse Antique Hanging Lamp Lampara Colgante",
+		"price": 46,
+		"discountPercentage": 8.84,
+		"rating": 4.32,
+		"stock": 138,
+		"brand": "Ifei Home",
+		"category": "lighting",
+		"thumbnail": "https://dummyjson.com/image/i/products/99/thumbnail.jpg",
+		"images": [
+			"https://dummyjson.com/image/i/products/99/1.jpg",
+			"https://dummyjson.com/image/i/products/99/2.jpg",
+			"https://dummyjson.com/image/i/products/99/3.jpg",
+			"https://dummyjson.com/image/i/products/99/4.jpg",
+			"https://dummyjson.com/image/i/products/99/thumbnail.jpg"
+		]
 	}
 ]

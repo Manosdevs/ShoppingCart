@@ -17,6 +17,7 @@
 .checkcont {
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 1rem;
 }
 
 .checkli {
@@ -88,7 +89,7 @@
 
 .checktotal {
 	width: 15rem;
-	border: 1px solid white;
+	border: 2px solid white;
 	display: flex;
 	flex-direction: column;
 	height: 40%;
@@ -119,6 +120,8 @@
 	border-radius: 4px;
 	width: 50%;
 	margin: 0 auto 1rem auto;
+	-webkit-box-shadow: 5px 5px 15px 5px #372f2f;
+	box-shadow: 2px 2px 4px 3px #4e4d4d;
 }
 
 @media (max-width: 63rem) {

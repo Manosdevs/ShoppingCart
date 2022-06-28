@@ -7,11 +7,15 @@
 
 body {
 	background-color: #0b2435;
+	overflow-x: hidden;
 }
 
 .App {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+
+	justify-content: center;
 }
 
 .bi-cart {
@@ -36,6 +40,10 @@ body {
 	width: 100%;
 	height: 6rem;
 	display: flex;
+}
+
+.navDiv {
+	overflow-x: hidden;
 }
 
 .homeLink {
@@ -165,28 +173,27 @@ body {
 /* Product card styling ////////////////////////////////////////////////////////// */
 
 .productpage {
-	width: 80%;
+	width: 85%;
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(auto, 1fr);
 	grid-column-gap: 0.1rem;
 	margin-top: 1rem;
-	margin-left: auto;
 	margin-right: auto;
+	margin-left: auto;
 	gap: 0.5rem;
-
-	/* background-size: cover; */
-}
-
-@media (max-width: 43rem) {
-	.productpage {
-		grid-template-columns: repeat(1, 1fr);
-	}
 }
 
 @media (max-width: 62rem) {
 	.productpage {
 		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 43rem) {
+	.productpage {
+		grid-template-columns: repeat(1, 1fr);
+		width: 100%;
 	}
 }
 
@@ -200,7 +207,7 @@ body {
 	height: 20rem;
 	align-items: center;
 	border-radius: 1rem;
-	margin-bottom: 2rem;
+	margin: 0.5rem auto 1rem auto;
 }
 
 .cardcont > img {
@@ -219,6 +226,13 @@ body {
 	color: rgb(33, 37, 41);
 
 	font-size: 1.2rem;
+}
+
+@media (max-width: 63rem) {
+	.prodtitle {
+		overflow: visible;
+		white-space: normal;
+	}
 }
 
 .prodtitle:hover {
@@ -259,6 +273,12 @@ body {
 	top: 2rem;
 	border: 1px solid black;
 }
+@media (max-width: 63rem) {
+	.increment {
+		width: 3rem;
+		height: 2rem;
+	}
+}
 
 .counter {
 	position: relative;
@@ -270,6 +290,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: 1.2rem;
+	color: rgb(33, 37, 41);
 }
 
 /*/////Landing//////////*/
