@@ -1,4 +1,6 @@
-A super-market inspired shopping cart App made with HTML, CSS and React, using the <a href=https://dummyjson.com/ >Dummyjson products API </a>. Has 3 main pages, the landing/categories page, a page with the products of each category and a checkout page. The cart button triggers an offcanvas with the cart's content. Making this project, I learned a lot about CSS, structuring a website, and of course states as well as saving data in local storage.
+A super-market inspired shopping cart using the <a href=https://dummyjson.com/ >Dummyjson products API </a>. Has 3 main pages, the landing/categories page, a page with the products of each category and a checkout page. The cart button triggers an offcanvas with the cart's content. Making this project, I learned a lot about CSS, structuring a website, and of course states as well as saving data in local storage.
+
+Technologies used: <ul><li>HTML</li><li>CSS</li><li>React</li></ul>
 
 
 
