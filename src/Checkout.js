@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import Foods from './Productlist/products.json'
 import './checkout.css'
 import { useCart } from './Context'
@@ -48,9 +48,7 @@ export default function Checkout() {
 						</button>
 					</div>
 					<h6 className='itemtotal'> ${total.toFixed(2)} </h6>
-					<button
-						/* onClick={() => props.delItem(elem.id)} */ className='checkdelicon'
-					>
+					<button onClick={() => delItem(elem.id)} className='checkdelicon'>
 						<i className='bi bi-trash3'></i>
 					</button>
 				</div>

@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useParams } from 'react-router-dom'
 import Pcard from './components/productcard'
 import Foods from './Productlist/products.json'
-import Navbar from './components/navbar'
-import OffCanvs from './components/offcanvs'
 
 function App() {
 	let { category } = useParams()

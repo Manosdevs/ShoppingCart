@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Foods from '../Productlist/products.json'
 import { Link } from 'react-router-dom'
 import { useCart } from '../Context'
