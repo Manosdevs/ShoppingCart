@@ -18,8 +18,6 @@ export function CartContextProvider({ children }) {
 
 	function showSidebar() {
 		setOffCanv(!offCanv)
-		console.log(offCanv)
-		console.log(JSON.stringify(inCart, null, 2))
 	}
 
 	function getAmount(id) {
@@ -28,7 +26,6 @@ export function CartContextProvider({ children }) {
 
 	function addToCart(id) {
 		setInCart((elem) => [...elem, { id: id, amount: 1 }])
-		console.log(JSON.stringify(inCart, null, 2))
 	}
 
 	function delItem(id) {

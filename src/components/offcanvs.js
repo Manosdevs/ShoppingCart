@@ -23,7 +23,6 @@ export default function OffCanvs(props) {
 						Amount: {elem.amount} x ${Foods[elem.id].price.toFixed(2)}{' '}
 					</h6>
 					<br></br>
-					<h6 className='total'>Total ${total.toFixed(2)} </h6>
 				</div>
 				<button onClick={() => delItem(elem.id)} className='bg-dark delicon'>
 					<i className='bi bi-trash3'></i>
