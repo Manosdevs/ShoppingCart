@@ -1,70 +1,15 @@
-# Getting Started with Create React App
+A super-market inspired shopping cart using the <a href=https://dummyjson.com/ >Dummyjson products API </a>. Has 3 main pages, the landing/categories page, a page with the products of each category and a checkout page. The cart button triggers an offcanvas with the cart's content. Making this project, I learned a lot about CSS, structuring a website, and of course states as well as saving data in local storage.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Technologies used: <ul><li>HTML</li><li>CSS</li><li>React</li></ul>
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+<h2>TimeLine</h2>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Initially started out using Bootstrap for the Navbar and the offcanvas, however I quickly decided to make the product cards myself, as I thought I'd learn a lot
+doing so. Did the same for the product section in the offcanvas, and admittedly the code was (some leftover parts probably still are) very messy. I made a model for the product cards, mapped over the database and rendered everything 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+As far as the cart functionality goes, after very quickly realizing the issues with saving everything in a state, I switched to saving it in local storage. I saved the added items as an object with an id and an amount, and added the needed functions to modify those. Some issues arose while passing the props to the product card and updating the in-cart amounts accurately. I fixed those by adding a variable into the product card model that kept a counter for each one. And of course that was also a bad idea because saving a variable in local state for each and every item in the product database is not scaleable. I fixed that by only initializing it for the already in-cart items, and after a review I commited the initial version.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+A while later, as I was learning about React's context API, this app came to mind as I realized that the issues I encountered were because I didn't know how to properly pass the needed states in a global scope.
+So after a quick revisit, I remade the functionality with a contextProvider as well as added a checkout and a product category page. 
